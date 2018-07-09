@@ -10,30 +10,39 @@ export class TableComponent implements OnInit {
 
   constructor(private tableService: TableService) { }
   userData : any;
+  totalMarks: Number = 0;
   ngOnInit() {
     this.userSearch();
   }
 
   userSearch(){
     this.tableService.userSearch().subscribe(data=>{
-      console.log(data);
       this.userData  = data;
-      this.userData.forEach(function(element) {
-        if(element.marks){
-            for (var key in element.marks) {
-              if (element.marks.hasOwnProperty(key)) {
-                console.log(element.marks[key]);
-                  if(element.marks[key]<20){
-                      element.status = "failed";
-                  }else{
-                    element.status = "pass"
-                  }
-              }
+      this.checkStatus();
+      let i = 0;
+      while(i<=this.userData.length-1){
+            for (var key in this.userData[i].marks) {
+              this.totalMarks += this.totalMarks + this.userData[i].marks[key]
+                console.log(this.totalMarks)
           }
-        }
-      });
+        i++
+      };
     })
   }
-
+  checkStatus(){
+    for(let i=0; i<=this.userData.length-1; i++){
+      let marks = this.userData[i].marks;
+          for (var key in this.userData[i].marks) {
+            if (this.userData[i].marks.hasOwnProperty(key)) {    
+                if(this.userData[i].marks[key]<20){
+                  this.userData[i].status = "Failed";
+                  break;
+                }else{
+                  this.userData[i].status = "Pass";
+                }
+            }
+        }
+    };
+  }
 
 }
