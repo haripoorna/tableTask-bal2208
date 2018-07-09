@@ -1,10 +1,15 @@
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Finn</td>
-    <td>10</td>
-  </tr>
+  <thead>
+      <tr class="table">
+          <th scope="col">Student Name</th>
+          <th scope="col">Roll Number</th>
+          <th scope="col">Total Marks</th>
+          <th scope="col">Status</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of monthlyEmis" style="cursor:pointer"  class="table" >
+          <td >{{item.period}}</td>
+          
+  </tbody>
 </table>
