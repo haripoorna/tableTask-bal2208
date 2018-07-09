@@ -25,5 +25,23 @@
             "Science":50
         },
         "rollNumber":"KV2017-5A3"
+    },
+    {
+        "name":"Hima",
+        "marks":{
+            "Maths":30,
+            "English":50,
+            "Science":45
+        },
+        "rollNumber":"KV2017-75"
+    },
+    {
+        "name":"Kumar",
+        "marks":{
+            "Maths":20,
+            "English":44,
+            "Science":23
+        },
+        "rollNumber":"KV2017-81"
     }
 ]

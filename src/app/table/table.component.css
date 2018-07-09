@@ -17,7 +17,8 @@ table caption {
 table tr {
     background: #f8f8f8;
     border: 1px solid #ddd;
-    padding: .35em
+    padding: .35em;
+    text-transform: capitalize
 }
 
 table td,
@@ -30,7 +31,8 @@ table th {
 table th {
     font-size: .85em;
     letter-spacing: .1em;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-style:italic;
 }
 
 @media screen and (max-width:767px) {
@@ -73,4 +75,11 @@ table th {
     table td:last-child {
         border-bottom: 0
     }
+}
+.fail{
+    color:red !important;
+
+}
+.pass{
+    color :#66CD00;
 }
