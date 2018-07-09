@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
+import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import {TableService} from './table/table.service';
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import {TableService} from './table/table.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   providers: [TableService],
   bootstrap: [AppComponent]

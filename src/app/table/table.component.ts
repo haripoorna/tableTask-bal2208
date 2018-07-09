@@ -8,9 +8,7 @@ import {TableService} from './table.service'
 })
 export class TableComponent implements OnInit {
 
-  constructor(private tableService: TableService {
-    
-  }) { }
+  constructor(private tableService: TableService) { }
 
   ngOnInit() {
     this.userSearch();
